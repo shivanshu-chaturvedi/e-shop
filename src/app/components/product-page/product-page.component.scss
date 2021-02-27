@@ -1,0 +1,61 @@
+
+
+/*Common CSS for mobile view, IPAD view and Desktop View*/
+
+
+
+.product-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .card-details {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 0.3em 0.5em;
+    background: #7cbaea;
+    cursor: pointer;
+  }
+  .card {
+    width: 88%;
+    height: 90%;
+    margin: auto;
+    background-image: radial-gradient(#73909c, #204859);
+  }
+  .card-container {
+    width: 151px;
+    height: 295px;
+    padding: 0 !important;
+  }
+  .products {
+    margin: auto;
+    .product-title {
+      text-align: center;
+      margin: 0.4em;
+    }
+  }
+  .card-price {
+    background-color: #7cbaea;
+    margin-left: auto;
+    margin-bottom: 1em;
+    .discount {
+      font-weight: bold;
+      color: #ce2c52;
+      padding: 0.5em;
+    }
+    .price {
+      padding-left: 0.5em;
+      font-weight: bold;
+    }
+  }
+  .--isDiscount {
+    text-decoration: line-through;
+  }
+  

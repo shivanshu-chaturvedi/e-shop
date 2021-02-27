@@ -1,0 +1,177 @@
+<div class="desktop-view">
+    <div class="closebtn" (click)="closeModal()"><span class="material-icons">control_point</span></div>
+    <div mat-dialog-content>
+        <div class="product-photo">
+            <div class="menu" (click)="toggleIcons()">
+                <li class="plus" [ngClass]="{'--rotate': iconSate}"><i class="fa fa-plus fa-2x plus-icon"></i></li>
+            </div>
+            <div class="pop" [ngClass]="{'--hide-social-icons': !iconSate}">
+                <ul>
+                    <li class="facebook"><i class="fa fa-facebook social-icons"></i></li>
+                    <li><i class="fa fa-twitter social-icons"></i></li>
+                    <li><i class="fa fa-pinterest-p social-icons"></i></li>
+                    <li><i class="fa fa-youtube-play social-icons"></i></li>
+                    <li><i class="fa fa-instagram social-icons"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="product-title">
+                <h1>{{data.name}}</h1>
+            </div>
+            <div class="item-code">Item #: {{data.item}}</div>
+            <div class="product-price"><span class="price" [ngClass]="{'--isDiscount': data.discount !== 0}">{{data.price
+                    | currency}}</span><span *ngIf="data.discount !==0" class="discount">{{data.discount | currency}}</span></div>
+            <div class="ratings">
+                <div class="rating-css">
+                    <div class="star-icon">
+                        <input type="radio" name="rating1" id="rating1">
+                        <label for="rating1" class="fa fa-star"></label>
+                        <input type="radio" name="rating1" id="rating2">
+                        <label for="rating2" class="fa fa-star"></label>
+                        <input type="radio" name="rating1" id="rating3">
+                        <label for="rating3" class="fa fa-star"></label>
+                        <input type="radio" name="rating1" id="rating4">
+                        <label for="rating4" class="fa fa-star"></label>
+                        <input type="radio" name="rating1" id="rating5">
+                        <label for="rating5" class="fa fa-star"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="description d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+            <div class="product-size">
+                <div class="size-title">SIZE:</div>
+                <form>
+                    <div class="radio-group">
+                        <input type="radio" id="option-one" name="selector"><label for="option-one">XL</label>
+                        <input type="radio" id="option-two" name="selector"><label for="option-two"> L</label>
+                        <input type="radio" id="option-three" name="selector"><label for="option-three"> M</label>
+                        <input type="radio" id="option-four" name="selector"><label for="option-four"> S</label>
+                    </div>
+                </form>
+            </div>
+            <button class="btn btn-default">Add to cart</button>
+
+        </div>
+
+    </div>
+</div>
+<div class="mobile-view">
+    <div class="closebtn" (click)="goBack()"><span class="material-icons">control_point</span></div>
+    <div>
+        <h3 mat-dialog-title class="product-title">{{data.name}}</h3>
+    </div>
+    <div class="mobile-layout">
+        <div class="item-code">Item #: {{data.item}}</div>
+        <div class="ratings">
+            <div class="rating-css">
+                <div class="star-icon">
+                    <input type="radio" name="rating1-m" id="rating1-m">
+                    <label for="rating1-m" class="fa fa-star"></label>
+                    <input type="radio" name="rating1-m" id="rating2-m">
+                    <label for="rating2-m" class="fa fa-star"></label>
+                    <input type="radio" name="rating1-m" id="rating3-m">
+                    <label for="rating3-m" class="fa fa-star"></label>
+                    <input type="radio" name="rating1-m" id="rating4-m">
+                    <label for="rating4-m" class="fa fa-star"></label>
+                    <input type="radio" name="rating1-m" id="rating5-m">
+                    <label for="rating5-m" class="fa fa-star"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-photo-mobile"></div>
+    <div class="description-small">
+        <div class="des-title">Details :</div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+    <div class="pop">
+        <ul>
+            <li class="facebook"><i class="fa fa-facebook social-icons"></i></li>
+            <li><i class="fa fa-twitter social-icons"></i></li>
+            <li><i class="fa fa-pinterest-p social-icons"></i></li>
+            <li><i class="fa fa-youtube-play social-icons"></i></li>
+            <li><i class="fa fa-instagram social-icons"></i></li>
+        </ul>
+    </div>
+    <div class="product-price"><span class="price" [ngClass]="{'--isDiscount': data.discount !== 0}">{{data.price |
+            currency}}</span><span *ngIf="data.discount !==0" class="discount">{{data.discount | currency}}</span></div>
+    <div class="product-size">
+        <div class="size-title">SIZE:</div>
+        <form>
+            <div class="radio-group">
+                <input type="radio" id="option-one-m" name="selector"><label for="option-one-m">XL</label>
+                <input type="radio" id="option-two-m" name="selector"><label for="option-two-m"> L</label>
+                <input type="radio" id="option-three-m" name="selector"><label for="option-three-m"> M</label>
+                <input type="radio" id="option-four-m" name="selector"><label for="option-four-m"> S</label>
+            </div>
+        </form>
+    </div>
+    <div class="cart"><button class="btn btn-default">Add to cart</button></div>
+</div>
+<div class="ipad-view">
+    <div class="closebtn" (click)="closeModal()"><span class="material-icons">control_point</span></div>
+    <h3 mat-dialog-title class="">{{data.name}}</h3>
+    <div class="ipad-layout">
+        <div class="product-photo">
+            <div class="pop">
+                <ul>
+                    <li class="facebook"><i class="fa fa-facebook social-icons"></i></li>
+                    <li><i class="fa fa-twitter social-icons"></i></li>
+                    <li><i class="fa fa-pinterest-p social-icons"></i></li>
+                    <li><i class="fa fa-youtube-play social-icons"></i></li>
+                    <li><i class="fa fa-instagram social-icons"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="item-code">Item #: {{data.item}}</div>
+            <div class="ratings">
+                <div class="rating-css">
+                    <div class="star-icon">
+                        <input type="radio" name="rating1-i" id="rating1-i">
+                        <label for="rating1-i" class="fa fa-star"></label>
+                        <input type="radio" name="rating1-i" id="rating2-i">
+                        <label for="rating2-i" class="fa fa-star"></label>
+                        <input type="radio" name="rating1-i" id="rating3-i">
+                        <label for="rating3-i" class="fa fa-star"></label>
+                        <input type="radio" name="rating1-i" id="rating4-i">
+                        <label for="rating4-i" class="fa fa-star"></label>
+                        <input type="radio" name="rating1-i" id="rating5-i">
+                        <label for="rating5-i" class="fa fa-star"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-price">
+                <div class="price" [ngClass]="{'--isDiscount': data.discount !== 0}">{{data.price | currency}}</div>
+                <div *ngIf="data.discount !==0" class="discount">{{data.discount | currency}}</div>
+            </div>
+            <div class="product-size">
+                <div class="size-title">SIZE:</div>
+                <form>
+                    <div class="radio-group">
+                        <input type="radio" id="option-one-i" name="selector"><label for="option-one-i">XL</label>
+                        <input type="radio" id="option-two-i" name="selector"><label for="option-two-i"> L</label>
+                        <input type="radio" id="option-three-i" name="selector"><label for="option-three-i"> M</label>
+                        <input type="radio" id="option-four-i" name="selector"><label for="option-four-i"> S</label>
+                    </div>
+                </form>
+            </div>
+            <button class="btn btn-default">Add to cart</button>
+        </div>
+    </div>
+    <div class="description-small">
+        <div class="des-title">Details :</div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+</div>

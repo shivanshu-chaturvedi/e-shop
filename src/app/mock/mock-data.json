@@ -1,0 +1,38 @@
+ [
+    {
+        "name": "PRODUCT NAME 1",
+        "item": 701642853695,
+        "price": 29.59,
+        "discount": 19.99
+    },
+    {
+        "name": "PRODUCT NAME 2",
+        "item": 701642233695,
+        "price": 32.99,
+        "discount": 26.99
+    },
+    {
+        "name": "PRODUCT NAME 3",
+        "item": 701645643695,
+        "price": 9.9,
+        "discount": 0
+    },
+    {
+        "name": "PRODUCT NAME 4",
+        "item": 201642853695,
+        "price": 52.99,
+        "discount": 0
+    },
+    {
+        "name": "PRODUCT NAME 5",
+        "item": 578542853695,
+        "price": 69.99,
+        "discount": 39.99
+    },
+    {
+        "name": "PRODUCT NAME 6",
+        "item": 872642853695,
+        "price": 34.99,
+        "discount": 0
+    }
+]
