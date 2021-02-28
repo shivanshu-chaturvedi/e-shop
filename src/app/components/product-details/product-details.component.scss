@@ -71,24 +71,18 @@
 
 .pop {
     ul {
-        width: 10%;
-        padding: 0;
-        margin: 0 0.5em;
-        li {
-            padding: 0.7em 0.86em;
-            display: inline;
-            border-radius: 50%;
-            border: 2px solid #E89806;
-        }
-      }
-    .social-icons {
-        color:#E89806 ;
-        font-weight: bold;
-        margin: 1.5em auto;
-    }
-    .facebook {
-        padding: 0.7em 1em !important;
+    padding: 0.6em;
+    li {
+    list-style: none;
+    margin: 1em 0;
+    background-image: url("../../../assets/circle.svg");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     } 
+  }
 }
 
 .--hide-social-icons {
@@ -219,7 +213,8 @@
     .pop{
         display: flex;
         ul{
-        width: 73%;
+        width: 80%;
+        display: flex;
         margin: auto;
         li {
          margin: 0.5em;

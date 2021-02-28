@@ -2,7 +2,25 @@
 
 /*Common CSS for mobile view, IPAD view and Desktop View*/
 
-
+.sale {
+  width: 100%;
+  min-height: 110px;
+  display: flex;
+  justify-content: center;
+  span {
+    margin: auto;
+  }
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 1em;
+  background: radial-gradient(51.17% 51.78% at 50% 51.17%, #0C99D6 0%, #068BC5 100%);
+}
 
 .product-container {
     display: flex;
@@ -59,3 +77,12 @@
     text-decoration: line-through;
   }
   
+  /*CSS for mobile view*/
+
+   
+@media screen and (max-width: 480px) {
+  
+.product-container {
+  position: relative;
+}
+}
